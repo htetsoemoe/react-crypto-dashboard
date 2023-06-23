@@ -9,11 +9,10 @@ const CryptoTable = () => {
 
     return (     
         <div>
-            <h1 className="text-xl font-semibold">Crypto Table Component</h1>
             <div className="container mx-auto mt-5">
                 <Table striped highlightOnHover withBorder horizontalSpacing="md" verticalSpacing="md" fontSize="md"
                     className='w-[95%] mx-auto table-auto'>
-                    <thead>
+                    <thead className='bg-slate-300'>
                         <tr>
                             <th>#</th>
                             <th>Name</th>

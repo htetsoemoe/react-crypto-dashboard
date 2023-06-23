@@ -6,7 +6,7 @@ import trending from '../assets/Trending'
 
 const CryptoTrending = () => {
   return (
-    <div className='flex-col w-96 border shadow rounded m-auto pt-3 pb-3 pl-5 pr-5 hover:bg-slate-300'>
+    <div className='flex-col w-96 border shadow rounded bg-slate-300 pt-3 pb-3 pl-5 pr-5'>
       <div className='flex justify-between mb-3'>
         <div className="flex items-center gap-2">
           <img src="https://s2.coinmarketcap.com/static/cloud/img/TrendingIcon.png?_=0a1112e" width={25} alt="trending" />
