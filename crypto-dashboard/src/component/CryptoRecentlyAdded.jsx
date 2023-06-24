@@ -1,6 +1,5 @@
 import React from 'react'
 import { BiChevronRight } from 'react-icons/bi'
-import { RiArrowUpSLine } from 'react-icons/ri'
 import recentlyAdded from '../assets/RecentlyAdded'
 
 const CryptoRecentlyAdded = () => {
