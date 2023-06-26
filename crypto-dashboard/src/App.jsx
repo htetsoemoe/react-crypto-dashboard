@@ -5,6 +5,7 @@ import CryptoRecentlyAdded from './component/CryptoRecentlyAdded'
 import CryptoCommunity from './component/CryptoCommunity'
 import CryptoSocialsCarousel from './component/CryptoSocialsCarousel'
 import CryptoCommunityPost from './component/CryptoCommunityPost'
+import CryptoDataTable from './component/CryptoDataTable'
 
 
 const App = () => {
