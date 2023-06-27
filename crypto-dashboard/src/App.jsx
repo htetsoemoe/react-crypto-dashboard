@@ -2,23 +2,25 @@ import React from 'react'
 import CryptoTable from './component/CryptoTable'
 import CryptoTrending from './component/CryptoTrending'
 import CryptoRecentlyAdded from './component/CryptoRecentlyAdded'
-import CryptoCommunity from './component/CryptoCommunity'
 import CryptoSocialsCarousel from './component/CryptoSocialsCarousel'
-import CryptoCommunityPost from './component/CryptoCommunityPost'
-import CryptoDataTable from './component/CryptoDataTable'
+import CryptoPriceLineChart from './component/CryptoPriceLineChart'
+import CryptoVerticalBar from './component/CryptoVerticalBar'
 
 
 const App = () => {
   return (
     <div>
-      <h2 className='text-2xl font-semibold text-center'>Crypto Dashboard</h2>
-      <div className="flex justify-center gap-10 mt-10 md:flex-wrap sm:flex-wrap max-sm:flex-wrap">
-        {/* <CryptoCommunityPost /> */}
+      <div className="flex justify-center gap-7 mb-5 mt-10 md:flex-wrap sm:flex-wrap max-sm:flex-wrap">
         <CryptoTrending />
         <CryptoRecentlyAdded />
-        {/* <CryptoCommunity /> */}
         <CryptoSocialsCarousel />
       </div>
+
+      <div className="flex justify-evenly md:flex-wrap sm:flex-wrap max-sm:flex-wrap p-3 gap-3">
+        <CryptoPriceLineChart />
+        <CryptoVerticalBar />
+      </div>
+
       <CryptoTable />
     </div>
   )
