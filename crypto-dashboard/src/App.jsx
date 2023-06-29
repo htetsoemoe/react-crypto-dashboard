@@ -5,11 +5,14 @@ import CryptoRecentlyAdded from './component/CryptoRecentlyAdded'
 import CryptoSocialsCarousel from './component/CryptoSocialsCarousel'
 import CryptoPriceLineChart from './component/CryptoPriceLineChart'
 import CryptoVerticalBar from './component/CryptoVerticalBar'
+import Header from './component/Header'
 
 
 const App = () => {
   return (
     <div>
+      <Header/>
+
       <div className="flex justify-center gap-7 mb-5 mt-10 md:flex-wrap sm:flex-wrap max-sm:flex-wrap">
         <CryptoTrending />
         <CryptoRecentlyAdded />
