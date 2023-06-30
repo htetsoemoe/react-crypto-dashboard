@@ -41,7 +41,7 @@ const Header = ({ sidebarOpen, setSidebarOpen }) => {
                                     aria-controls='search-modal'
                                     onClick={e => {
                                         e.stopPropagation()
-                                        setSearchModalOpen(true)
+                                        setSearchModalOpen(true) // when user click search icon set true and pass props as 'modalopen' to ModalSearch component
                                     }}>
                                     <span className="sr-only">Search</span>
                                     <svg className="w-4 h-4" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -55,10 +55,13 @@ const Header = ({ sidebarOpen, setSidebarOpen }) => {
                                         />
                                     </svg>
                                 </button>
+
+                                {/* when use click the search button show modal box with React-CSS-Transition */}
                                 <SearchModal 
                                     id="search-modal"
                                     searchId="search"
-                                    modalOpen={searchModalOpen}/>
+                                    modalOpen={searchModalOpen}
+                                    setModalOpen={setSearchModalOpen}/>
                             </div>
 
                             <Notifications align="right"/>
