@@ -3,6 +3,12 @@ import React from 'react'
 const ThemeToggle = () => {
   return (
     <div>
+      <input
+        type="checkbox"
+        name='light-switch'
+        id='light-switch'
+        className='light-switch '
+        onChange={() => document.documentElement.style.colorScheme = "dark"} />
       <label
         className="flex items-center justify-center cursor-pointer w-8 h-8 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600/80 rounded-full"
         htmlFor="light-switch"
@@ -15,7 +21,7 @@ const ThemeToggle = () => {
           />
           <path className="fill-current text-slate-500" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
         </svg>
-        
+
         {/* when dark mode on => show moon svg */}
         <svg className="w-4 h-4 hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
           <path
