@@ -14,6 +14,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </Provider>
 )
-
-{/* <MantineProvider theme={{ colorScheme: 'light' }} withGlobalStyles withNormalizeCSS>     
-    </MantineProvider> */}

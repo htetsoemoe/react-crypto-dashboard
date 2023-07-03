@@ -16,22 +16,21 @@ const CryptoTable = () => {
     const records = coinMarkets.slice(firstIndex, lastIndex)
     const rows = records.map(coin => {
         return (
-            <tr key={coin.id}
-                className='border-b dark:bg-slate-700 dark:border-gray-700'>
-                <td scope="row" className="pl-6 dark:text-white">{coin.market_cap_rank}</td>
-                <td className='flex items-center gap-3 pt-4 pb-4'>
+            <tr key={coin.id}>
+                <td>{coin.market_cap_rank}</td>
+                <td className='flex gap-3'>
                     <img src={coin.image} width={25} alt="coin" />
-                    <a href="#" className='hover:underline'>{coin.name}</a>
+                    <a href="#" className='text-black font-semibold hover:underline'>{coin.name}</a>
                 </td>
-                <td><span className="pl-5 font-semibold">$</span> {coin.market_cap}</td>
-                <td><span className="pl-5 font-semibold">$</span> {coin.total_volume}</td>
-                <td className='pl-5'>
+                <td><span className="font-semibold">$</span> {coin.market_cap}</td>
+                <td><span className="font-semibold">$</span> {coin.total_volume}</td>
+                <td>
                     {coin.circulating_supply}
                     <span className="font-semibold ml-2">
                         {coin.symbol.toUpperCase()}
                     </span>
                 </td>
-                <td className='pl-5'>
+                <td>
                     {coin.max_supply}
                     <span className="font-semibold ml-2">
                         {coin.max_supply === null ? '' : coin.symbol.toUpperCase()}
@@ -43,36 +42,24 @@ const CryptoTable = () => {
 
     return (
         <div>
-            <div className="w-[80%] mx-auto mt-7 mb-5">
-                <ScrollArea h={620} type="scroll" scrollbarSize={4} >
+            <div className="w-[80%] mx-auto mt-7">
+                <ScrollArea h={550} type="scroll" scrollbarSize={4} >
                     <Box w={1220}>
-                        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                            <thead className="text-sm text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <Table striped highlightOnHover withBorder horizontalSpacing="sm" verticalSpacing="sm" fontSize="sm">
+                            <thead className='bg-slate-300'>
                                 <tr>
-                                    <th scope='col' className='px-6 py-3'>
-                                        #
-                                    </th>
-                                    <th scope='col' className='px-6 py-3'>
-                                        Name
-                                    </th>
-                                    <th scope='col' className='px-6 py-3'>
-                                        Market Capital
-                                    </th>
-                                    <th scope='col' className='px-6 py-3'>
-                                        Volume(24h)
-                                    </th>
-                                    <th scope='col' className='px-6 py-3'>
-                                        Circulating Supply
-                                    </th>
-                                    <th scope='col' className='px-6 py-3'>
-                                        Total Supply
-                                    </th>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Market Capital</th>
+                                    <th>Volume(24h)</th>
+                                    <th>Circulating Supply</th>
+                                    <th>Total Supply</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {rows}
                             </tbody>
-                        </table>
+                        </Table>
                     </Box>
                 </ScrollArea>
                 <div className="mt-2 mb-2">
@@ -87,3 +74,5 @@ const CryptoTable = () => {
 }
 
 export default CryptoTable
+
+

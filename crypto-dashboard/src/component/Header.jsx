@@ -9,14 +9,14 @@ const Header = ({ sidebarOpen, setSidebarOpen }) => {
 
     return (
         <header>
-            <div className="sticky mx-auto w-[80%] mt-3 bg-white dark:bg-[#182235] border-b border-slate-200 dark:border-slate-200 z-30">
+            <div className="sticky mx-auto w-[80%] bg-slate-300 border-b border-slate-200 z-30">
                 <div className="px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16 -mb-px">
                         {/* Header => left hand side */}
                         <div className="flex">
                             {/* hamburger button */}
                             <button
-                                className=""
+                                className="lg:hidden"
                                 aria-controls='sidebar'
                                 aria-expanded={sidebarOpen}
                                 onClick={e => {
@@ -65,10 +65,10 @@ const Header = ({ sidebarOpen, setSidebarOpen }) => {
                             </div>
 
                             <Notifications align="right"/>
-                            <ThemeToggle />
+                            {/* <ThemeToggle /> */}
 
                             {/* Divider between Profile and ThemeToggle */}
-                            <hr className="w-px h-6 bg-slate-200 dark:bg-slate-700 border-none" />
+                            <hr className="w-px h-6 bg-black border-none" />
                             <UserMenu align="right"/>
                         </div>
                     </div>

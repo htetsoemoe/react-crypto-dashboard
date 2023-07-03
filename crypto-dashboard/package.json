@@ -19,6 +19,8 @@
     "chart.js": "^4.3.0",
     "embla-carousel-autoplay": "^8.0.0-rc07",
     "embla-carousel-react": "^8.0.0-rc07",
+    "flowbite": "^1.6.6",
+    "flowbite-react": "^0.4.9",
     "mantine-datatable": "^2.6.4",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",

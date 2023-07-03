@@ -11,6 +11,7 @@ import {
 } from 'chart.js'
 import { Line } from 'react-chartjs-2'
 import { faker } from '@faker-js/faker'
+import { Box, ScrollArea } from '@mantine/core'
 
 ChartJS.register(
     CategoryScale,
