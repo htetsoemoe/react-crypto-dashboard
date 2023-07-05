@@ -42,7 +42,7 @@ const CryptoTable = () => {
 
     return (
         <div>
-            <div className="w-[80%] mx-auto mt-7">
+            <div className=" mx-auto mt-7">
                 <ScrollArea h={550} type="scroll" scrollbarSize={4} >
                     <Box w={1220}>
                         <Table striped highlightOnHover withBorder horizontalSpacing="sm" verticalSpacing="sm" fontSize="sm">

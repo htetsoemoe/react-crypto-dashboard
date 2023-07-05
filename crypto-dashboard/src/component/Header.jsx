@@ -9,7 +9,7 @@ const Header = ({ sidebarOpen, setSidebarOpen }) => {
 
     return (
         <header>
-            <div className="sticky mx-auto w-[80%] bg-slate-300 border-b border-slate-200 z-30">
+            <div className="sticky w-[100] bg-slate-200 border-b border-slate-200 z-30">
                 <div className="px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16 -mb-px">
                         {/* Header => left hand side */}
