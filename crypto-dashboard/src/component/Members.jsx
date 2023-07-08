@@ -6,8 +6,9 @@ import CryptoTable from './CryptoTable';
 import CryptoTrending from './CryptoTrending';
 import CryptoRecentlyAdded from './CryptoRecentlyAdded';
 import CryptoSocialsCarousel from './CryptoSocialsCarousel';
+import CryptoDataTable from './CryptoDataTable';
 
-const Customers = () => {
+const Members = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false)
 
     return (
@@ -30,7 +31,7 @@ const Customers = () => {
 
                 <div className="ml-8 mr-6">
                     <div className="">
-                        <CryptoTable />
+                        <CryptoDataTable />
                     </div>
                 </div>
 
@@ -40,4 +41,4 @@ const Customers = () => {
 
 }
 
-export default Customers
+export default Members

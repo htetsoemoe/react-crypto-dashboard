@@ -12,13 +12,13 @@ const Dashboard = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false)
 
     return (
-        <div className="flex v-screen overflow-hidden">
+        <div className="flex h-screen overflow-hidden">
             {/* Sidebar */}
             <div className="">
                 <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
             </div>
 
-            <div className='w-[100%] v-screen bg-cyan-50 '>
+            <div className='relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden w-[100%] bg-cyan-50 '>
                 <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
                 <div className=" flex justify-center gap-7 mb-5 mt-5 md:flex-wrap sm:flex-wrap max-sm:flex-wrap">
@@ -37,7 +37,7 @@ const Dashboard = () => {
                         <CryptoTable />
                     </div>
                 </div>
-                
+
             </div>
         </div>
 

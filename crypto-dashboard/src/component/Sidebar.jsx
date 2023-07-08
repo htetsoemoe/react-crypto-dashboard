@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { AiOutlineDashboard } from 'react-icons/ai'
+import { AiFillDashboard } from 'react-icons/ai'
 import { GoPeople } from 'react-icons/go'
+import { BsFillPeopleFill } from 'react-icons/bs'
 import { FaBitcoin } from 'react-icons/fa'
 import { FaWallet } from 'react-icons/fa'
 import { AiTwotoneSetting } from 'react-icons/ai'
@@ -61,7 +63,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             <div
                 id="sidebar"
                 ref={sidebar}
-                className={`flex flex-col h-full absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-slate-800 p-4 transition-all duration-200 ease-in-out ${sidebarOpen ? 'translate-x-0' : '-translate-x-64'
+                className={`flex flex-col h-full absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 overflow-y-hidden lg:overflow-y-auto no-scrollbar  w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-slate-800 p-4 transition-all duration-200 ease-in-out ${sidebarOpen ? 'translate-x-0' : '-translate-x-64'
                     }`}
             >
                 {/* Sidebar header */}
@@ -120,11 +122,11 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                         </h3>
                         <ul className="mt-3">
                             {/* Dashboard */}
-                            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('dashboard') && 'bg-slate-900'}`}>
+                            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('/') && ''}`}>
                                 <NavLink
                                     end
                                     to="/"
-                                    className={`block text-slate-200 truncate transition duration-150 ${pathname.includes('dashboard') ? 'hover:text-slate-200' : 'hover:text-white'
+                                    className={`block text-slate-200 truncate transition duration-150 ${pathname.includes('/') ? 'hover:text-slate-200' : 'hover:text-white'
                                         }`}
                                 >
                                     <div className="flex items-center justify-between">
@@ -140,7 +142,8 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                                                 />
                                             </svg> */}
                                             <div className="">
-                                                <AiOutlineDashboard className='text-2xl'/>
+                                                {/* <AiOutlineDashboard className='text-2xl'/> */}
+                                                <AiFillDashboard className='text-2xl'/>
                                             </div>
                                             <span className="text-sm font-medium ml-3 text-green-500 hover:underline lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                                                 Dashboard
@@ -156,17 +159,18 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                                 </NavLink>
                             </li>
                             {/* Members */}
-                            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('customers') && 'bg-slate-900'}`}>
+                            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('members') && 'bg-slate-900 underline'}`}>
                                 <NavLink
                                     end
-                                    to="/customers"
-                                    className={`block text-slate-200 truncate transition duration-150 ${pathname.includes('customers') ? 'hover:text-slate-200' : 'hover:text-white'
+                                    to="/members"
+                                    className={`block text-slate-200 truncate transition duration-150 ${pathname.includes('members') ? 'hover:text-slate-200' : 'hover:text-white'
                                         }`}
                                 >
                                     <div className="flex justify-between items-center">
                                         <div className="flex items-center">
                                             <div className="">
-                                                <GoPeople className='text-2xl' />
+                                                {/* <GoPeople className='text-2xl' /> */}
+                                                <BsFillPeopleFill className='text-2xl'/>
                                             </div>
                                             <span className="text-sm font-medium ml-3 text-green-500 hover:underline lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                                                 Members
@@ -182,7 +186,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                                 </NavLink>
                             </li>
                             {/* BitCoin Prices */}
-                            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('prices') && 'bg-slate-900'}`}>
+                            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('prices') && 'bg-slate-900 underline'}`}>
                                 <NavLink
                                     end
                                     to="/prices"
@@ -200,7 +204,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                                 </NavLink>
                             </li>
                             {/* Wallet */}
-                            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('wallet') && 'bg-slate-900'}`}>
+                            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('wallet') && 'bg-slate-900 underline'}`}>
                                 <NavLink
                                     end
                                     to="/wallet"
@@ -218,7 +222,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                                 </NavLink>
                             </li>
                             {/* Setting */}
-                            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('setting') && 'bg-slate-900'}`}>
+                            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('setting') && 'bg-slate-900 underline'}`}>
                                 <NavLink
                                     end
                                     to="/setting"
