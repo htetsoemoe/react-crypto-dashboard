@@ -1,59 +1,60 @@
 import React, { useState } from 'react'
 import { Table, ScrollArea, Box } from '@mantine/core'
-import { useGetCoinsMarketQuery } from '../redux/api/cryptoApi'
 import { Pagination } from '@mantine/core';
-import coinMarkets from '../assets/CoinMarkets'
+import people from '../../data/people';
 
-const CryptoTable = () => {
-    //const { data } = useGetCoinsMarketQuery()
-    //console.log(data)
-
+const MemberDataTable = () => {
     const [activePage, setPage] = useState(1) // activePage state for pagination
     const recordsPerPage = 10
     const lastIndex = activePage * recordsPerPage // last index = 1 * 10 = 10
     const firstIndex = lastIndex - recordsPerPage // first index = 10 - 10 = 0
 
-    const records = coinMarkets.slice(firstIndex, lastIndex)
-    const rows = records.map(coin => {
+    const records = people.slice(firstIndex, lastIndex)
+    const rows = records.map(person => {
         return (
-            <tr key={coin.id}>
-                <td>{coin.market_cap_rank}</td>
-                <td className='flex gap-3'>
-                    <img src={coin.image} width={25} alt="coin" />
-                    <a href="#" className='text-black font-semibold hover:underline'>{coin.name}</a>
-                </td>
-                <td><span className="font-semibold">$</span> {coin.market_cap}</td>
-                <td><span className="font-semibold">$</span> {coin.total_volume}</td>
-                <td>
-                    {coin.circulating_supply}
-                    <span className="font-semibold ml-2">
-                        {coin.symbol.toUpperCase()}
-                    </span>
+            <tr key={person.id}>
+                <td>{person.id}</td>
+                <td className='flex items-center gap-3'>
+                    <img src={person.image} className='w-10 h-10 rounded-full' alt="person" />
+                    <a href="#" className='text-black font-semibold hover:underline'>{person.name}</a>
                 </td>
                 <td>
-                    {coin.max_supply}
-                    <span className="font-semibold ml-2">
-                        {coin.max_supply === null ? '' : coin.symbol.toUpperCase()}
-                    </span>
+                    {person.email}
                 </td>
+                <td>
+                    {person.city}
+                </td>
+                <td>
+                    {person.creditcard}
+                </td>
+                <th>
+
+                </th>
+                <th>
+
+                </th>
+                <th>
+                    <button className="px-3 py-1 bg-green-500 hover:bg-green-800 hover:text-white rounded">Active</button>
+                </th>
             </tr>
         )
     })
-
     return (
         <div>
             <div className=" mx-auto mt-7">
-                <ScrollArea h={550} type="scroll" scrollbarSize={4} >
+                <ScrollArea h={700} type="scroll" scrollbarSize={4} >
                     <Box w={1220}>
                         <Table striped highlightOnHover withBorder horizontalSpacing="sm" verticalSpacing="sm" fontSize="sm">
                             <thead className='bg-slate-300'>
                                 <tr>
                                     <th>#</th>
                                     <th>Name</th>
-                                    <th>Market Capital</th>
-                                    <th>Volume(24h)</th>
-                                    <th>Circulating Supply</th>
-                                    <th>Total Supply</th>
+                                    <th>Email</th>
+                                    <th>City</th>
+                                    <th>Account No.</th>
+                                    <th>Wallet No.</th>
+                                    <th>Registration Date</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -73,6 +74,4 @@ const CryptoTable = () => {
     )
 }
 
-export default CryptoTable
-
-
+export default MemberDataTable

@@ -10,12 +10,11 @@ const Path = () => {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Dashboard />}/>
-        <Route path='/members' element={<Members />}/>
-        <Route path='/prices' element={<BitcoinPrices />}/>
+        <Route path='/' element={<Dashboard />} />
+        <Route path='/members' element={<Members />} />
+        <Route path='/prices' element={<BitcoinPrices />} />
         <Route path='/wallet' element={<MyWallet />} />
         <Route path='/setting' element={<MySetting />} />
-
       </Routes>
     </div>
   )

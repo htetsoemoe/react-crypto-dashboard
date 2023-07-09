@@ -1,14 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { AiOutlineDashboard } from 'react-icons/ai'
 import { AiFillDashboard } from 'react-icons/ai'
-import { GoPeople } from 'react-icons/go'
 import { BsFillPeopleFill } from 'react-icons/bs'
 import { FaBitcoin } from 'react-icons/fa'
 import { FaWallet } from 'react-icons/fa'
 import { AiTwotoneSetting } from 'react-icons/ai'
-
-import SidebarLinkGroup from './SidebarLinkGroup';
 
 function Sidebar({ sidebarOpen, setSidebarOpen }) {
     const location = useLocation();
@@ -105,7 +101,9 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                                 fill="url(#logo-b)"
                             />
                         </svg> */}
-                        <h1 className='text-slate-100 text-2xl'>Crytoboard</h1>
+                        <h1 className='text-slate-100 text-2xl'>
+                            Crytoboard
+                        </h1>
                     </NavLink>
                 </div>
 
@@ -143,7 +141,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                                             </svg> */}
                                             <div className="">
                                                 {/* <AiOutlineDashboard className='text-2xl'/> */}
-                                                <AiFillDashboard className='text-2xl'/>
+                                                <AiFillDashboard className='text-2xl' />
                                             </div>
                                             <span className="text-sm font-medium ml-3 text-green-500 hover:underline lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                                                 Dashboard
@@ -170,7 +168,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                                         <div className="flex items-center">
                                             <div className="">
                                                 {/* <GoPeople className='text-2xl' /> */}
-                                                <BsFillPeopleFill className='text-2xl'/>
+                                                <BsFillPeopleFill className='text-2xl' />
                                             </div>
                                             <span className="text-sm font-medium ml-3 text-green-500 hover:underline lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                                                 Members
@@ -195,7 +193,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                                 >
                                     <div className="flex items-center">
                                         <div className="">
-                                            <FaBitcoin className='text-2xl'/>
+                                            <FaBitcoin className='text-2xl' />
                                         </div>
                                         <span className="text-sm font-medium ml-3 text-green-500 hover:underline lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                                             Bitcoin Prices
@@ -213,7 +211,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                                 >
                                     <div className="flex items-center">
                                         <div className="">
-                                            <FaWallet className='text-2xl'/>
+                                            <FaWallet className='text-2xl' />
                                         </div>
                                         <span className="text-sm font-medium ml-3 text-green-500 hover:underline lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                                             My Wallet
@@ -231,7 +229,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                                 >
                                     <div className="flex items-center">
                                         <div className="">
-                                            <AiTwotoneSetting className='text-2xl'/>
+                                            <AiTwotoneSetting className='text-2xl' />
                                         </div>
                                         <span className="text-sm font-medium ml-3 text-green-500 hover:underline lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                                             Setting
@@ -242,7 +240,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                         </ul>
                     </div>
                     {/* More group */}
-                    
+
                 </div>
 
                 {/* Expand / collapse button */}

@@ -2,7 +2,7 @@ import React from 'react'
 import { BiChevronRight } from 'react-icons/bi'
 import { AiFillStar } from 'react-icons/ai'
 import { MdOutlineVerified } from 'react-icons/md'
-import socials from '../assets/Socials'
+import socials from '../../data/Socials'
 
 const CryptoCommunity = () => {
     return (
@@ -25,7 +25,7 @@ const CryptoCommunity = () => {
                             <div className="flex items-center w-64">
                                 <img className='rounded-full mr-3 hover:cursor-pointer' width={20} src={social?.icon} alt="trendingIcon" />
                                 <span className="font-semibold hover:cursor-pointer">{social?.name}</span>
-                                <MdOutlineVerified className='ml-1 mr-3 text-blue-800 hover:cursor-pointer'/>
+                                <MdOutlineVerified className='ml-1 mr-3 text-blue-800 hover:cursor-pointer' />
                                 <span className="text-xs hover:cursor-pointer">{social?.social_account}</span>
                             </div>
                             <div className="ml-5">

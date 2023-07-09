@@ -2,7 +2,7 @@ import React from 'react'
 import { BiChevronRight } from 'react-icons/bi'
 import { RiArrowUpSLine } from 'react-icons/ri'
 
-import trending from '../assets/Trending'
+import trending from '../../data/Trending'
 
 const CryptoTrending = () => {
   return (

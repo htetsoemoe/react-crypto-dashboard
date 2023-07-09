@@ -3,9 +3,9 @@ import { useRef } from 'react';
 import { Carousel } from '@mantine/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import { rem } from '@mantine/core';
-import CryptoCommunity from './CryptoCommunity';
-import CryptoCommunityPost from './CryptoCommunityPost';
-import CryptoCommunityArticle from './CryptoCommunityArticle';
+import CryptoCommunity from '../dashboardComponents/CryptoCommunity';
+import CryptoCommunityPost from '../dashboardComponents/CryptoCommunityPost';
+import CryptoCommunityArticle from '../dashboardComponents/CryptoCommunityArticle';
 
 const CryptoSocialsCarousel = () => {
     const autoplay = useRef(Autoplay({ delay: 3000 }));

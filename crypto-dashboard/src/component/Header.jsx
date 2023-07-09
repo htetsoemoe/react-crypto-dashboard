@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import SearchModal from './headerComponents/ModalSearch'
 import Notifications from './headerComponents/DropdownNotifications'
 import UserMenu from './headerComponents/DropdownProfile'
-import ThemeToggle from './headerComponents/ThemeToggle'
 
 const Header = ({ sidebarOpen, setSidebarOpen }) => {
     const [searchModalOpen, setSearchModalOpen] = useState(false)
@@ -57,19 +56,19 @@ const Header = ({ sidebarOpen, setSidebarOpen }) => {
                                 </button>
 
                                 {/* when use click the search button show modal box with React-CSS-Transition */}
-                                <SearchModal 
+                                <SearchModal
                                     id="search-modal"
                                     searchId="search"
                                     modalOpen={searchModalOpen}
-                                    setModalOpen={setSearchModalOpen}/>
+                                    setModalOpen={setSearchModalOpen} />
                             </div>
 
-                            <Notifications align="right"/>
+                            <Notifications align="right" />
                             {/* <ThemeToggle /> */}
 
                             {/* Divider between Profile and ThemeToggle */}
                             <hr className="w-px h-6 bg-black border-none" />
-                            <UserMenu align="right"/>
+                            <UserMenu align="right" />
                         </div>
                     </div>
                 </div>

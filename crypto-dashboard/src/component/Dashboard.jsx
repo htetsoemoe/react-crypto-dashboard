@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import Sidebar from './Sidebar'
 import Header from './Header'
-import CryptoTrending from './CryptoTrending'
-import CryptoRecentlyAdded from './CryptoRecentlyAdded'
-import CryptoSocialsCarousel from './CryptoSocialsCarousel'
-import CryptoPriceLineChart from './CryptoPriceLineChart'
-import CryptoVerticalBar from './CryptoVerticalBar'
-import CryptoTable from './CryptoTable'
+import CryptoTrending from './dashboardComponents/CryptoTrending'
+import CryptoRecentlyAdded from './dashboardComponents/CryptoRecentlyAdded'
+import CryptoSocialsCarousel from './dashboardComponents/CryptoSocialsCarousel'
+import CryptoPriceLineChart from './dashboardComponents/CryptoPriceLineChart'
+import CryptoVerticalBar from './dashboardComponents/CryptoVerticalBar'
+import CryptoTable from './dashboardComponents/CryptoTable'
 
 const Dashboard = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false)
