@@ -12,40 +12,40 @@ const MemberDataTable = () => {
     const records = people.slice(firstIndex, lastIndex)
     const rows = records.map(person => {
         return (
-            <tr key={person.id}>
-                <td>{person.id}</td>
+            <tr key={person?.id}>
+                <td>{person?.id}</td>
                 <td className='flex items-center gap-3'>
-                    <img src={person.image} className='w-10 h-10 rounded-full' alt="person" />
-                    <a href="#" className='text-black font-semibold hover:underline'>{person.name}</a>
+                    <img src={person?.image} className='w-10 h-10 rounded-full' alt="person" />
+                    <a href="#" className='text-black font-semibold hover:underline'>{person?.name}</a>
                 </td>
                 <td>
-                    {person.email}
+                    {person?.email === null ? 'example@mail.com' : person?.email}
                 </td>
                 <td>
-                    {person.city}
+                    {person?.city === null ? 'middle of nowhere' : person?.city}
                 </td>
                 <td>
-                    {person.creditcard}
+                    {person?.creditcard === null ? '1228-1221-0009-4120' : person?.creditcard}
                 </td>
-                <th>
-
-                </th>
-                <th>
-
-                </th>
-                <th>
+                <td>
+                    {"2Tt94120"}
+                </td>
+                <td>
+                    {person?.timestamp.slice(0, 10)}
+                </td>
+                <td>
                     <button className="px-3 py-1 bg-green-500 hover:bg-green-800 hover:text-white rounded">Active</button>
-                </th>
+                </td>
             </tr>
         )
     })
     return (
         <div>
-            <div className=" mx-auto mt-7">
+            <div className=" mx-auto mt-3">
                 <ScrollArea h={700} type="scroll" scrollbarSize={4} >
-                    <Box w={1220}>
+                    <Box w={1207}>
                         <Table striped highlightOnHover withBorder horizontalSpacing="sm" verticalSpacing="sm" fontSize="sm">
-                            <thead className='bg-slate-300'>
+                            <thead className='bg-slate-400 '>
                                 <tr>
                                     <th>#</th>
                                     <th>Name</th>
