@@ -46,7 +46,7 @@ const CryptoTable = () => {
                 <ScrollArea h={550} type="scroll" scrollbarSize={4} >
                     <Box w={1220}>
                         <Table striped highlightOnHover withBorder horizontalSpacing="sm" verticalSpacing="sm" fontSize="sm">
-                            <thead className='bg-slate-300'>
+                            <thead className='bg-slate-400'>
                                 <tr>
                                     <th>#</th>
                                     <th>Name</th>

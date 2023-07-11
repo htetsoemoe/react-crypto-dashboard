@@ -10,7 +10,7 @@ import CryptoCommunityArticle from '../dashboardComponents/CryptoCommunityArticl
 const CryptoSocialsCarousel = () => {
     const autoplay = useRef(Autoplay({ delay: 3000 }));
     return (
-        <Carousel
+        <Carousel className=' transform duration-500 hover:-translate-y-2'
             maw={380}
             // mx="auto"
             loop

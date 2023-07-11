@@ -68,7 +68,7 @@ export const data = {
 
 const MemberLineChart = () => {
   return (
-      <div className='flex-col w-96 border shadow rounded bg-slate-600 pt-3 pb-3 pl-5 pr-5'>
+      <div className='flex-col w-96 border shadow rounded bg-slate-500 pt-3 pb-3 pl-5 pr-5 transform duration-500 hover:-translate-y-2 '>
           <div className='flex justify-between mb-3'>
               <div className="flex items-center gap-2">
                   <FaCoins className='text-2xl' color='yellow' />
