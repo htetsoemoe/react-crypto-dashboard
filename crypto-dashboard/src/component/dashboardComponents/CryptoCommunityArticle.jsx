@@ -5,6 +5,8 @@ import { BsFillSuitHeartFill } from 'react-icons/bs'
 import bitcoinPhoto from '/coin.jpg'
 
 const CryptoCommunityArticle = () => {
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
     return (
         <div className='flex-col border shadow rounded bg-slate-500 pt-3 pb-3 pl-6 pr-6'>
             <div className='flex justify-between mb-3'>
@@ -29,7 +31,7 @@ const CryptoCommunityArticle = () => {
                     </a>
                     
                     <div className="flex items-center gap-3 mt-2">
-                        <span className=" font-semibold">Jun 10 .</span>
+                        <span className=" font-semibold">{`${months[new Date().getMonth()]} ${new Date().getDate()} .`}</span>
                         <div className="flex items-center gap-2 hover:cursor-pointer">
                             <AiFillMessage className='text-blue-100' />
                             <span className=" font-semibold">508 .</span>
