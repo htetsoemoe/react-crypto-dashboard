@@ -1,19 +1,17 @@
 import React, { useState } from 'react'
 import { Table, ScrollArea, Box } from '@mantine/core'
-import { useGetCoinsMarketQuery } from '../../redux/api/cryptoApi'
 import { Pagination } from '@mantine/core';
-import coinMarkets from '../../data/CoinMarkets'
+import { BiSolidUpArrow } from 'react-icons/bi'
+import { BiSolidDownArrow } from 'react-icons/bi'
+import bitcoinPrices from '../../data/BitcoinPrices'
 
-const CryptoTable = () => {
-    //const { data } = useGetCoinsMarketQuery()
-    //console.log(data)
-
+const BitcoinPricesTables = () => {
     const [activePage, setPage] = useState(1) // activePage state for pagination
     const recordsPerPage = 10
     const lastIndex = activePage * recordsPerPage // last index = 1 * 10 = 10
     const firstIndex = lastIndex - recordsPerPage // first index = 10 - 10 = 0
 
-    const records = coinMarkets.slice(firstIndex, lastIndex)
+    const records = bitcoinPrices.slice(firstIndex, lastIndex)
     const rows = records.map(coin => {
         return (
             <tr key={coin.id}>
@@ -22,8 +20,36 @@ const CryptoTable = () => {
                     <img src={coin.image} width={25} alt="coin" />
                     <a href="#" className='text-black font-semibold hover:underline'>{coin.name}</a>
                 </td>
-
                 <td><span className="font-semibold">$</span> {coin.current_price}</td>
+
+                <td>
+                    <div className="flex">
+                        <div className="flex items-center gap-2">
+                            <BiSolidUpArrow className='text-red-900' />
+                            <span className="text-red-700 font-semibold">{coin.onehour}</span>
+                        </div>
+                        <div className='ml-1 font-semibold'>%</div>
+                    </div>
+                </td>
+                <td>
+                    <div className="flex">
+                        <div className="flex items-center gap-2">
+                            <BiSolidDownArrow className='text-green-900' />
+                            <span className="text-green-700 font-semibold">{coin.tfhours}</span>
+                        </div>
+                        <div className='ml-1 font-semibold'>%</div>
+                    </div>
+                </td>
+                <td>
+                    <div className="flex">
+                        <div className="flex items-center gap-2">
+                            <BiSolidDownArrow className='text-green-900' />
+                            <span className="text-green-700 font-semibold">{coin.sevendays}</span>
+                        </div>
+                        <div className='ml-1 font-semibold'>%</div>
+                    </div>
+                </td>
+
                 <td><span className="font-semibold">$</span> {coin.market_cap}</td>
                 <td><span className="font-semibold">$</span> {coin.total_volume}</td>
                 <td>
@@ -41,7 +67,6 @@ const CryptoTable = () => {
             </tr>
         )
     })
-
     return (
         <div>
             <div className=" mx-auto mt-7">
@@ -53,6 +78,9 @@ const CryptoTable = () => {
                                     <th>#</th>
                                     <th>Name</th>
                                     <th>Price</th>
+                                    <th>1hr %</th>
+                                    <th>24hr %</th>
+                                    <th>7days %</th>
                                     <th>Market Capital</th>
                                     <th>Volume(24h)</th>
                                     <th>Circulating Supply</th>
@@ -69,13 +97,11 @@ const CryptoTable = () => {
                     <Pagination
                         value={activePage}
                         onChange={setPage}
-                        total={10} />
+                        total={3} />
                 </div>
             </div>
         </div>
     )
 }
 
-export default CryptoTable
-
-
+export default BitcoinPricesTables
