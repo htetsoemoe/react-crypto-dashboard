@@ -69,7 +69,7 @@ const BitcoinPricesTables = () => {
     })
     return (
         <div>
-            <div className=" mx-auto mt-7">
+            <div className=" mx-auto mt-4">
                 <ScrollArea h={550} type="scroll" scrollbarSize={4} >
                     <Box w={1220}>
                         <Table striped highlightOnHover withBorder horizontalSpacing="sm" verticalSpacing="sm" fontSize="sm">
