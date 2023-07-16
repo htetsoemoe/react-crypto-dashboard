@@ -12,6 +12,12 @@ const TransactionsTable = () => {
         currency: 'USD',
     })
 
+    // Format the price to MMK using the locale, style and currency
+    let MMKyat = new Intl.NumberFormat('my-MM', {
+        style: 'currency',
+        currency: 'MMK',
+    })
+
     const [activePage, setPage] = useState(1) // activePage state for pagination
     const recordsPerPage = 10
     const lastIndex = activePage * recordsPerPage // last index = 1 * 10 = 10
@@ -73,7 +79,7 @@ const TransactionsTable = () => {
 
     return (
         <div>
-            <div className=" mx-auto mt-7">
+            <div className=" mx-auto mt-4">
                 <ScrollArea h={700} type="scroll" scrollbarSize={4} >
                     <Box w={1207}>
                         <Table striped highlightOnHover withBorder horizontalSpacing="sm" verticalSpacing="sm" fontSize="sm">
