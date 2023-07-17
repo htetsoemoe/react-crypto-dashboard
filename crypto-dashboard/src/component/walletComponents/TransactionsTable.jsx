@@ -79,7 +79,7 @@ const TransactionsTable = () => {
 
     return (
         <div>
-            <div className=" mx-auto mt-4">
+            <div className=" mx-auto mt-3">
                 <ScrollArea h={700} type="scroll" scrollbarSize={4} >
                     <Box w={1207}>
                         <Table striped highlightOnHover withBorder horizontalSpacing="sm" verticalSpacing="sm" fontSize="sm">

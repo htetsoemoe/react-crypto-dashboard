@@ -9,7 +9,7 @@ const BitcoinTopExchange = () => {
         <div className='flex-col border shadow rounded bg-slate-500 pt-3 pb-3 pl-6 pr-6 transform duration-500 hover:-translate-y-2'>
             <div className='flex justify-between mb-3'>
                 <div className="flex items-center gap-2">
-                    <FaCoins className='text-2xl text-orange-300' />
+                    <FaCoins className='text-2xl ' color='#faf202' />
                     <span className='font-semibold text-xl'>Top Bitcoin Exchanges</span>
                 </div>
                 <a className='flex items-center' href="#">

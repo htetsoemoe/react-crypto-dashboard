@@ -18,7 +18,9 @@ const BitcoinSent = () => {
         <div className='flex-col w-96 border shadow rounded bg-slate-500 pt-3 pb-3 pl-5 pr-5 transform duration-500 hover:-translate-y-2'>
             <div className='flex justify-between mb-3'>
                 <div className="flex items-center gap-2">
-                    <BsArrowUpRight className='text-2xl' color='' />
+                    <div className="bg-orange-500 p-1 rounded-full">
+                        <BsArrowUpRight className='text-2xl' color='white' />
+                    </div>
                     <span className='font-semibold text-2xl'>Send</span>
                 </div>
             </div>

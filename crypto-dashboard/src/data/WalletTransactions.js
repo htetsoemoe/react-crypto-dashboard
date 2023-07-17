@@ -65,10 +65,10 @@ const transactions = [
         "image": "joker.jpg",
         "date": "Jan 07 2023",
         "time": "11:00 PM",
-        "type": "Received",
+        "type": "Sent",
         "transactionId": "125-QCS-187-248",
-        "amount": 155.99,
-        "btc": 0.00001,
+        "amount": 2000,
+        "btc": 0.0002,
         "status": "Success",
     },
     {
