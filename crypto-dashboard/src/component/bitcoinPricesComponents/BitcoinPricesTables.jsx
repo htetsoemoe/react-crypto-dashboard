@@ -71,7 +71,7 @@ const BitcoinPricesTables = () => {
         <div>
             <div className=" mx-auto mt-4">
                 <ScrollArea h={550} type="scroll" scrollbarSize={4} >
-                    <Box w={1220}>
+                    <Box w={1250}>
                         <Table striped highlightOnHover withBorder horizontalSpacing="sm" verticalSpacing="sm" fontSize="sm">
                             <thead className='bg-slate-400'>
                                 <tr>

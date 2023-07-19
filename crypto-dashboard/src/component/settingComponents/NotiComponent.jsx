@@ -26,7 +26,7 @@ const NotiComponent = () => {
 
                 <div className='mt-7'>
                     <h1 className="font-semibold mb-3">Email</h1>
-                    <Checkbox className='mb-3' label='New Letters' />
+                    <Checkbox className='mb-3' label='NewsLetters' />
                     <Checkbox className='mb-3' label='Daily Prices Update' />
                     <Checkbox className='mb-3' label='Weekly Prices and Predictions' />
                     <Checkbox className='mb-3' label='Community Articles' />

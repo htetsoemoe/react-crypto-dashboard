@@ -4,6 +4,7 @@ import Transition from '../../utils/Transition'
 import { CgProfile } from 'react-icons/cg'
 
 const DropdownProfile = ({ align }) => {
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const trigger = useRef(null);
@@ -41,7 +42,8 @@ const DropdownProfile = ({ align }) => {
       >
 
         <div className="flex items-center truncate">
-          <CgProfile className='w-6 h-6' style={{ color: '#1377eb' }} />
+          {/* <CgProfile className='w-3 h-3' style={{ color: '#1377eb' }} /> */}
+          <img src="joker.jpg" className='w-5 h-5 rounded-full' alt="accountImage" />
           <span className="truncate ml-2 text-sm font-medium dark:text-slate-300 group-hover:text-slate-800 dark:group-hover:text-slate-200">Admin</span>
           <svg className="w-3 h-3 shrink-0 ml-1 fill-current text-slate-400" viewBox="0 0 12 12">
             <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
@@ -66,7 +68,7 @@ const DropdownProfile = ({ align }) => {
         >
           <div className="pt-0.5 pb-2 px-3 mb-1 border-b border-slate-200 dark:border-slate-700">
             <Link>
-              <div className="font-medium text-slate-800 dark:text-slate-100">Mr.Htet</div>
+              <div className="font-medium text-slate-800 dark:text-slate-100">Ko Htet</div>
             </Link>
             <div className="text-xs text-slate-500 dark:text-slate-400 italic">Administrator</div>
           </div>
@@ -74,7 +76,7 @@ const DropdownProfile = ({ align }) => {
             <li>
               <Link
                 className="font-medium text-sm text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center py-1 px-3"
-                to="/signout"
+                to="/"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
                 Sign Out
