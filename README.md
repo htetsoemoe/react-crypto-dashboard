@@ -10,7 +10,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[JWT Authentication\] ](#-cryptocurrency-dashboard-)
+- [📖 \[Cryptocurrency Dashboard\] ](#-cryptocurrency-dashboard-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
